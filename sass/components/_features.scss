@@ -1,0 +1,75 @@
+/* ==================== FEATURES ======================= */
+
+.container-features {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.features-item {
+  &::before {
+    display: flex;
+    content: '';
+    height: 120px;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.antenna::before {
+    background-image: url(../images/features/antenna.svg);
+  }
+
+  &.clock::before {
+    background-image: url(../images/features/clock.svg);
+  }
+
+  &.diagram::before {
+    background-image: url(../images/features/diagram.svg);
+  }
+
+  &.astronaut::before {
+    background-image: url(../images/features/astronaut.svg);
+  }
+}
+
+.features {
+  &-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $black;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $gray;
+    margin-top: 0;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    width: 270px;
+  }
+
+  &-item:not(:nth-child(4n)) {
+    margin-right: 30px;
+  }
+}

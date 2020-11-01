@@ -1,0 +1,36 @@
+/* Cancel the underscore of the link */
+a {
+  text-decoration: none;
+}
+
+/* We remove the markers */
+li {
+  list-style-type: none;
+}
+
+/* We remove the Italian from the links in the addresses */
+.address {
+  font-style: normal;
+  display: flex;
+  margin-left: auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.padding-bottom {
+  padding-bottom: 94px;
+}
+
+img {
+  display: block;
+}
+
+/* main font */
+body {
+  font-family: $main-font;
+  font-style: normal;
+}
