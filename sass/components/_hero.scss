@@ -1,42 +1,47 @@
 /* ====================== HERO ========================= */
 
 .hero {
-  text-align: center;
-  height: 600px;
-
-  &-section {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(47, 48, 58, 0.4);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/background.jpg);
-    max-width: 1600px;
-    background-position: center;
-    background-origin: inherit;
-  }
-
-  &-text {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    color: $white;
-    text-transform: uppercase;
-    margin-top: 0px;
-    margin-bottom: 30px;
-    padding-top: 200px;
-  }
-
-  &-button {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    color: $white;
-    padding: 11px 32px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    background-color: $blue;
-    display: inline-block;
-    min-width: 200px;
-  }
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-mobile.jpg);
+  padding: 118px 60px;
 }
+
+// .hero {
+//   text-align: center;
+//   height: 600px;
+
+//   &-section {
+//     margin-left: auto;
+//     margin-right: auto;
+//     background-color: rgba(47, 48, 58, 0.4);
+//     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/background.jpg);
+//     max-width: 1600px;
+//     background-position: center;
+//     background-origin: inherit;
+//   }
+
+//   &-text {
+//     font-weight: 900;
+//     font-size: 44px;
+//     line-height: 1.36;
+//     letter-spacing: 0.06em;
+//     color: $white;
+//     text-transform: uppercase;
+//     margin-top: 0px;
+//     margin-bottom: 30px;
+//     padding-top: 200px;
+//   }
+
+//   &-button {
+//     font-weight: 700;
+//     font-size: 16px;
+//     line-height: 1.87;
+//     letter-spacing: 0.06em;
+//     color: $white;
+//     padding: 11px 32px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//     border-radius: 4px;
+//     background-color: $blue;
+//     display: inline-block;
+//     min-width: 200px;
+//   }
+// }
