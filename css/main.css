@@ -58,6 +58,7 @@ body {
   .container {
     width: 1200px;
     padding: 0 15px;
+    padding-bottom: 94px;
   }
 }
 
@@ -576,7 +577,6 @@ input {
   .container-features {
     display: flex;
     padding-top: 94px;
-    padding-bottom: 94px;
     margin: 0 auto;
   }
   .features-list {
@@ -641,20 +641,15 @@ input {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1199px) {
+  .work-section {
+    display: none;
+  }
+}
+
 /* ===================== TEAM ========================= */
 .team {
   background-color: #f5f4fa;
-}
-
-.team-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  color: #212121;
-  text-align: center;
-  margin-top: 0;
-  padding-top: 94px;
 }
 
 .team-name {
@@ -687,7 +682,7 @@ input {
 
 .social-list {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 0;
   margin: 0;
 }
@@ -713,8 +708,71 @@ input {
   fill: #ffffff;
 }
 
-.list-team {
-  padding-bottom: 30px;
+.social-list li:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .team {
+    padding-bottom: 60px;
+  }
+  .team-title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: #212121;
+    text-align: center;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  .list-team:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .social-list {
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team {
+    padding-bottom: 60px;
+  }
+  .team-title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: #212121;
+    text-align: center;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  .list-team:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+  .social-list {
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: #212121;
+    text-align: center;
+    margin: 0;
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
+  .social-list {
+    padding-bottom: 30px;
+  }
 }
 
 /* =======================CLIENTS=========================== */

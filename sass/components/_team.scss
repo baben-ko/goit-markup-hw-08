@@ -4,14 +4,6 @@
   background-color: #f5f4fa;
 
   &-title {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
-    color: $black;
-    text-align: center;
-    margin-top: 0;
-    padding-top: 94px;
   }
 
   &-name {
@@ -46,7 +38,7 @@
 
 .social-list {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 0;
   margin: 0;
 }
@@ -73,6 +65,80 @@
   }
 }
 
-.list-team {
-  padding-bottom: 30px;
+.social-list li:not(:last-child) {
+  margin-right: 10px;
+}
+
+// ----------------for MOBILE-------------------
+
+@media screen and (max-width: 767px) {
+  .team {
+    padding-bottom: 60px;
+    &-title {
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 1.17;
+      letter-spacing: 0.03em;
+      color: $black;
+      text-align: center;
+      margin: 0;
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .list-team:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .social-list {
+    padding-bottom: 24px;
+  }
+}
+
+// ----------------for TABLET------------------
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team {
+    padding-bottom: 60px;
+    &-title {
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 1.17;
+      letter-spacing: 0.03em;
+      color: $black;
+      text-align: center;
+      margin: 0;
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
+  }
+  .list-team:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+
+  .social-list {
+    padding-bottom: 24px;
+  }
+}
+
+// -----------------for DESKTOP--------------------
+
+@media screen and (min-width: 1200px) {
+  .team {
+    &-title {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.16;
+      letter-spacing: 0.03em;
+      color: $black;
+      text-align: center;
+      margin: 0;
+      padding-top: 94px;
+      padding-bottom: 50px;
+    }
+  }
+  .social-list {
+    padding-bottom: 30px;
+  }
 }
