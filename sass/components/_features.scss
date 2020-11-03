@@ -1,16 +1,6 @@
 /* ==================== FEATURES ======================= */
 
-.container-features {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-top: 94px;
-  padding-bottom: 94px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
+// constant parametr
 .features-item {
   &::before {
     display: flex;
@@ -59,17 +49,107 @@
     color: $gray;
     margin-top: 0;
   }
+}
 
-  &-list {
+//   &-list {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+
+//   &-item {
+//     width: 270px;
+//   }
+
+//   &-item:not(:nth-child(4n)) {
+//     margin-right: 30px;
+//   }
+// }
+
+// .container-features {
+//   display: flex;
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 1200px;
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+//   padding-left: 15px;
+//   padding-right: 15px;
+// }
+
+// ----------------for MOBILE-------------------
+
+@media screen and (max-width: 767px) {
+  .container-features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .features {
+    &-text {
+      margin: 0;
+    }
+    &-item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &-title {
+      text-align: center;
+    }
+  }
+}
+
+// ----------------for TABLET------------------
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container-features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    // display: flex;
+  }
+
+  .features {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-around;
+    }
+    &-item {
+      width: 354px;
+    }
+    &-item:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+    &-text {
+      margin: 0;
+    }
+  }
+}
+
+// -----------------for DESKTOP--------------------
+
+@media screen and (min-width: 1200px) {
+  .container-features {
     display: flex;
-    flex-wrap: wrap;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin: 0 auto;
   }
 
-  &-item {
-    width: 270px;
-  }
+  .features {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-  &-item:not(:nth-child(4n)) {
-    margin-right: 30px;
+    &-item {
+      width: 270px;
+    }
+
+    &-item:not(:nth-child(4n)) {
+      margin-right: 30px;
+    }
+    &-text {
+      margin: 0;
+    }
   }
 }
