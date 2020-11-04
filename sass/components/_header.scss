@@ -1,17 +1,22 @@
-/* ================== HEADER ======================*/
+// /* ================== HEADER ======================*/
 
 .container-flex-header {
-  display: flex;
-  align-items: center;
-  height: 80px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: center;
+  // height: 80px;
   border-bottom: 1px solid #ececec;
-  padding-bottom: 0;
+  padding: 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 16px 0;
+  }
 }
 
 .header-menu-link {
   display: block;
-  padding-bottom: 33px;
-  padding-top: 32px;
+  // padding-bottom: 33px;
+  // padding-top: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -24,6 +29,11 @@
   &:focus {
     color: $blue;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 1.166;
+  }
 }
 
 .header {
@@ -31,10 +41,30 @@
   &-nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
   }
+  &-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-content: center;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.header {
   &-menu-item:not(:last-child) {
     margin-right: 50px;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 0 40px 0;
+    }
   }
 
   &-logo {
@@ -46,7 +76,7 @@
   }
 
   &-menu-item {
-    position: relative;
+    // position: relative;
   }
 
   &-menu-item .active::after {
@@ -54,11 +84,19 @@
     display: flex;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: -38px;
     left: 0;
     height: 4px;
     background-color: $blue;
     border-radius: 2px;
+
+    @media screen and (max-width: 767px) {
+      bottom: -8px;
+    }
+  }
+  &-menu-link {
+    display: inline-block;
+    position: relative;
   }
 }
 
@@ -71,13 +109,47 @@
     color: $gray;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
+    // display: flex;
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 1.166;
+    }
   }
 
   &-link-header:hover,
   &-link-header:focus {
     color: $blue;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .address-link-header:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-link-header:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address-link-header:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 
@@ -95,108 +167,60 @@
   align-items: center;
 }
 
-.menu-button .icon-menu {
-  display: none;
+.header {
+  position: relative;
 }
 
-.menu-button.is-open .icon-menu {
-  display: block;
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
 }
 
 .menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
   display: none;
 }
 
-// ----------------for MOBILE-------------------
+.mobile-menu {
+  background-color: $white;
 
-@media screen and (max-width: 767px) {
-  .address {
-    display: none;
-  }
+  padding: 20px 0;
 
-  .hide-header-menu {
-    display: none;
-  }
-
-  .menu-button {
-    right: 0;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-  }
-  .header-logo {
-    margin-right: 276px;
-  }
-
-  .mobile-menu {
+  @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    height: 393px;
-    background-color: wheat;
-    padding: 20px;
+    padding: 60px 0;
     text-align: center;
+
+    font-size: 18px;
+    line-height: 1.166;
 
     &.is-open {
       display: block;
     }
   }
-}
 
-// ----------------for TABLET------------------
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .address {
-    &-link-header:last-child {
-      margin-left: 0;
-    }
-    &-link-header:not(:last-child) {
-      margin-bottom: 10px;
-    }
-  }
-
-  .header {
-    &-menu {
-      display: flex;
-      margin-left: 88px;
-    }
-  }
-
-  .menu-button {
-    display: none;
-  }
-
-  .mobile-menu {
-    display: none;
-  }
-}
-
-// -----------------for DESKTOP--------------------
-
-@media screen and (min-width: 1200px) {
-  .address {
+  @media screen and (min-width: 768px) {
     display: flex;
-
-    &-link-header:last-child {
-      margin-left: 50px;
-    }
-  }
-
-  .header {
-    &-menu {
-      display: flex;
-      margin-left: 93px;
-    }
-  }
-  .menu-button {
-    display: none;
-  }
-
-  .mobile-menu {
-    display: none;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
   }
 }
