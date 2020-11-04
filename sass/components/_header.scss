@@ -5,6 +5,7 @@
   align-items: center;
   height: 80px;
   border-bottom: 1px solid #ececec;
+  padding-bottom: 0;
 }
 
 .header-menu-link {
@@ -26,14 +27,10 @@
 }
 
 .header {
+  position: relative;
   &-nav {
     display: flex;
     align-items: center;
-  }
-
-  &-menu {
-    display: flex;
-    margin-left: 93px;
   }
 
   &-menu-item:not(:last-child) {
@@ -78,10 +75,6 @@
     align-items: center;
   }
 
-  &-link-header:last-child {
-    margin-left: 50px;
-  }
-
   &-link-header:hover,
   &-link-header:focus {
     color: $blue;
@@ -100,4 +93,110 @@
   margin-right: 10px;
   fill: currentcolor;
   align-items: center;
+}
+
+.menu-button .icon-menu {
+  display: none;
+}
+
+.menu-button.is-open .icon-menu {
+  display: block;
+}
+
+.menu-button.is-open .icon-cross {
+  display: none;
+}
+
+// ----------------for MOBILE-------------------
+
+@media screen and (max-width: 767px) {
+  .address {
+    display: none;
+  }
+
+  .hide-header-menu {
+    display: none;
+  }
+
+  .menu-button {
+    right: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .header-logo {
+    margin-right: 276px;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 393px;
+    background-color: wheat;
+    padding: 20px;
+    text-align: center;
+
+    &.is-open {
+      display: block;
+    }
+  }
+}
+
+// ----------------for TABLET------------------
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address {
+    &-link-header:last-child {
+      margin-left: 0;
+    }
+    &-link-header:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .header {
+    &-menu {
+      display: flex;
+      margin-left: 88px;
+    }
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
+
+// -----------------for DESKTOP--------------------
+
+@media screen and (min-width: 1200px) {
+  .address {
+    display: flex;
+
+    &-link-header:last-child {
+      margin-left: 50px;
+    }
+  }
+
+  .header {
+    &-menu {
+      display: flex;
+      margin-left: 93px;
+    }
+  }
+  .menu-button {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
 }
