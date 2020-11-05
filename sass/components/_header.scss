@@ -181,6 +181,10 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+  &:hover,
+  &:focus {
+    fill: $blue;
+  }
 }
 
 .menu-button .icon-cross {
@@ -211,6 +215,7 @@
 
     font-size: 18px;
     line-height: 1.166;
+    z-index: 1;
 
     &.is-open {
       display: block;
