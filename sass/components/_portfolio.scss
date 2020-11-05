@@ -15,9 +15,20 @@
 .container-flex {
   display: flex;
   padding-top: 94px;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+
   margin: 0;
-  justify-content: center;
+
+  // @media screen and (max-width: 768px) {
+  //   display: block;
+  // }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+
+  // justify-content: center;
 }
 
 .portfolio-item img {
@@ -39,6 +50,9 @@
 
 .button-item:not(:last-child) {
   margin-right: 8px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .button-item .button {
@@ -61,11 +75,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 25px;
+  // padding-top: 25px;
 
-  &-item {
+  &-item:not(:last-child) {
     margin-bottom: 30px;
     border: 1px solid #eeeeee;
+  }
+
+  &-item {
+    border: 1px solid #eeeeee;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &-item:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .container {
+      padding-bottom: 0;
+    }
   }
 
   &-title {
@@ -93,9 +123,9 @@
     transform: translateY(0%);
   }
 
-  &-item:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }
+  // &-item:nth-last-child(-n + 3) {
+  //   margin-bottom: 0;
+  // }
 
   &-item .portfolio-category {
     margin-bottom: 0;
@@ -115,10 +145,14 @@
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  // width: 1200px;
   padding-bottom: 94px;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 60px;
+  }
 }
 
 .button-menu {
@@ -161,4 +195,19 @@
   color: $white;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+// ----------------for MOBILE-------------------
+
+@media screen and (max-width: 767px) {
+}
+
+// ----------------for TABLET------------------
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+}
+
+// -----------------for DESKTOP--------------------
+
+@media screen and (min-width: 1200px) {
 }

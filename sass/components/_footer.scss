@@ -24,18 +24,29 @@
 
   &-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
+    // width: 1200px;
     padding-bottom: 60px;
     padding-top: 60px;
     padding-left: 15px;
     padding-right: 15px;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &-form {
     display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &-text-button {
@@ -73,12 +84,18 @@
 
   &-logo {
     margin-top: 0;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 
   &-list {
     margin: 0;
     padding: 0;
     list-style: none;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
   &-address {
     margin-bottom: 9px;
@@ -89,6 +106,14 @@
 
   &-left {
     margin-right: 70px;
+
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 165px;
+    }
   }
 
   &-right h2 {
@@ -100,6 +125,13 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $white;
+
+    @media screen and (max-width: 767px) {
+      padding: 0;
+    }
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 
   &-list-social {
@@ -115,6 +147,14 @@
 
   &-right {
     margin-right: 93px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
+    @media screen and (max-width: 1199px) {
+      margin-right: 0;
+    }
   }
 
   &-right-form h2 {
@@ -126,6 +166,21 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $white;
+
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  &-right-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 60px;
+    }
   }
 }
 
@@ -164,4 +219,9 @@
   letter-spacing: 0.03em;
   padding: 0 0 0 16px;
   color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (max-width: 1199px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
