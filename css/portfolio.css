@@ -772,10 +772,17 @@ body {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .footer-form__input {
     margin-right: 0;
     margin-bottom: 20px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form__input {
+    width: 358px;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */
