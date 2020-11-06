@@ -222,13 +222,13 @@
   padding: 0 0 0 16px;
   color: rgba(255, 255, 255, 0.6);
 
+  @media screen and (max-width: 479px) {
+    max-width: 100%;
+  }
+
   @media screen and (max-width: 1199px) {
     margin-right: 0;
     margin-bottom: 20px;
     width: 450px;
-  }
-
-  @media screen and (max-width: 479px) {
-    max-width: 100%;
   }
 }

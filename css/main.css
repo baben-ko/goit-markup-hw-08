@@ -1290,17 +1290,17 @@ input {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 479px) {
+  .footer-form__input {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .footer-form__input {
     margin-right: 0;
     margin-bottom: 20px;
     width: 450px;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .footer-form__input {
-    max-width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
