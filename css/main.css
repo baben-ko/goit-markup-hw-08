@@ -1292,6 +1292,7 @@ input {
   .footer-form__input {
     max-width: 100%;
     margin-bottom: 20px;
+    margin-right: 0;
   }
 }
 
