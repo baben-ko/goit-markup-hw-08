@@ -58,8 +58,7 @@ body {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    padding: 0 15px;
-    padding-bottom: 94px;
+    padding: 0 15px 94px 15px;
   }
 }
 
@@ -476,6 +475,18 @@ body {
   pointer-events: none;
 }
 
+@media screen and (max-width: 426px) {
+  .overlay-portfolio {
+    padding: 30px 17px;
+  }
+}
+
+@media screen and (max-width: 386px) {
+  .overlay-portfolio {
+    padding: 12px 16px;
+  }
+}
+
 .text-overlay-portfolio {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -486,6 +497,12 @@ body {
   color: #ffffff;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 386px) {
+  .text-overlay-portfolio {
+    font-size: 16px;
+  }
 }
 
 .container-select-portfolio {
@@ -768,7 +785,7 @@ body {
 
 @media screen and (max-width: 479px) {
   .footer-form__input {
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 20px;
     margin-right: 0;
   }
