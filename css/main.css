@@ -196,7 +196,7 @@ body {
 
 .label-policy::before {
   content: '';
-  width: 16px;
+  min-width: 16px;
   height: 15px;
   border: 2px solid #212121;
   display: inline-block;
