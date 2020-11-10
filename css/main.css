@@ -696,6 +696,7 @@ input {
   letter-spacing: 0.03em;
   color: #757575;
   margin-top: 0;
+  text-align: left;
 }
 
 @media screen and (max-width: 767px) {
